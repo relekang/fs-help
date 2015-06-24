@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fdfdfd;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+nav {
+  height: 28px;
+  line-height: 24px;
+  padding: 0 20%;
+  margin: 0 auto;
+  clear: both;
+  font-size: 12px;
+  background: #222222;
+  color: #fdfdfd;
+  overflow: hidden;
+}
+nav a {
+  padding: 4px;
+  color: #fdfdfd;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  background: #333;
+}
+nav ul ul {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  background: #333;
+  display: none;
+}
+nav ul ul a {
+  line-height: 16px;
+  padding: 0 4px;
+  display: block;
+}
+nav ul ul li {
+  border-bottom: 1px dashed #555;
+}
+nav ul ul li:last-child {
+  border: none;
+}
+nav .user-info {
+  float: right;
+}
+nav > ul > li {
+  display: block;
+  float: left;
+  margin: 0;
+  position: relative;
+}
+article {
+  width: 60%;
+  padding: 20px 4px;
+  margin: 0 auto;
+}
+article table {
+  min-width: 50%;
+}
+article table tr:nth-child(even) {
+  background: #eeeeee;
+}
+article table tr:nth-child(odd) {
+  background: #ffffff;
+}
+article table th {
+  padding: 10px 5px 5px 5px;
+}
+article table td {
+  padding: 5px;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px dashed #dddddd;
+}
+article table td:first-child {
+  min-width: 200px;
+  border-left: none;
+}
+article .mceEditor table, article .mceEditor tr, article .mceEditor td {
+  background: #fdfdfd !important;
+}
+article .mceEditor td {
+  min-width: 0 !important;
+}
+article form label {
+  padding: 0;
+  font-weight: 600;
+}
+article form .helptext {
+  max-width: 300px;
+  font-size: 0.8em;
+  color: #222222;
+  display: block;
+}
+article form textarea {
+  min-width: 80%;
+}
+article form table {
+  min-width: 50%;
+}
+article form table tr:nth-child(even) {
+  background: #fdfdfd;
+}
+article form table tr:nth-child(odd) {
+  background: #fdfdfd;
+}
+article form table th {
+  padding: 10px 5px 5px 5px;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+  vertical-align: top;
+}
+article form table td {
+  padding: 10px 5px 5px 5px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 0 5%;
+  }
+  article {
+    width: 90%;
+  }
+}
