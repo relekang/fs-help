@@ -55,5 +55,6 @@ def search(request):
 
 
 def redirect_mobile(request, next):
-    url = 'http://www.lekang.com/wsScripts/cgiip.exe/WService=wslfshtml/m-login.r?neste=m-' + next + '.r'
+    url = 'http://www.lekang.com/wsScripts/cgiip.exe/WService=wslfshtml/m-login.r?neste=m-' + \
+          next + '.r'
     return HttpResponseRedirect(url)

@@ -96,6 +96,6 @@ INSTALLED_APPS = (
     'filtersystem.users',
 )
 
-# Override the server-derived value of SCRIPT_NAME 
+# Override the server-derived value of SCRIPT_NAME
 # See http://code.djangoproject.com/wiki/BackwardsIncompatibleChanges#lighttpdfastcgiandothers
 FORCE_SCRIPT_NAME = ''

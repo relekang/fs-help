@@ -74,7 +74,8 @@ class Topic(models.Model):
         lang = ""
         for t in Topic.objects.filter(slug=self.slug):
             if t.language:
-                if not lang == "": lang += ", "
+                if not lang == "":
+                    lang += ", "
                 lang += t.language.name
         return lang
 

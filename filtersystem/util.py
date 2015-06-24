@@ -20,5 +20,5 @@ def expire_page_cache(view, args=None):
     request = HttpRequest()
     request.path = path
     key = get_cache_key(request)
-    if cache.has_key(key):
+    if cache.has_key(key):  # noqa
         cache.delete(key)

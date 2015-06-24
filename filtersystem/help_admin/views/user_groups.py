@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import permission_required
 from django.forms.models import modelformset_factory
 from django.utils.translation import ugettext_lazy as _

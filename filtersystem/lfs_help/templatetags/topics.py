@@ -1,6 +1,5 @@
 from django import forms
 from django.template.base import Library
-from django.utils.translation import ugettext_lazy as _
 
 from filtersystem.lfs_help.models import Topic
 
