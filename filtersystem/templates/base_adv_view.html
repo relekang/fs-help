@@ -1,0 +1,48 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %} - {% trans "Lekang Online Hjelp" %}</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/bootstrap.responsive.min.css" rel="stylesheet">
+    <link href="/static/online_help_adv.css" rel="stylesheet"/>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<section>
+    <div class="container-fluid">
+    <div class="row-fluid">
+
+    <div class="row-fluid">
+
+            <article class="{% block article_class %}span9{% endblock %}">
+                <h1>{% block header %}{% endblock %}</h1>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tag }}">
+                            <a class="close" data-dismiss="alert">×</a>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% block content %}{% endblock %}
+            </article>
+            <header class="span3" class="pull-right">
+                <img src="http://www.lekang.com/image/loginlogo.jpg" />
+            </header>
+            <aside class="{% block sidebar_class %}well span3{% endblock %}">
+                {% block sidebar %}{% endblock %}
+            </aside>
+            <footer>
+                <hr class="style1"/>
+                Copyright&copy; Lekang gruppen 2011-{% now "Y" %}
+            </footer>
+    </div>
+    </div>
+</section>
+</body>
+</html>

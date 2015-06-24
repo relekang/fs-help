@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-18 11:07+0200\n"
+"PO-Revision-Date: 2012-06-18 11:07+0100\n"
+"Last-Translator: Rolf Erik Lekang <me@rolflekang.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: core/profiles/models.py:9
+msgid "user"
+msgstr "bruker"
+
+#: core/profiles/models.py:10
+#: lfs_help/models.py:30
+msgid "user group"
+msgstr "brukergruppe"
+
+#: core/profiles/models.py:11
+#: lfs_help/models.py:18
+msgid "language"
+msgstr "språk"
+
+#: core/profiles/models.py:44
+msgid "profile"
+msgstr "profil"
+
+#: core/profiles/models.py:45
+msgid "profiles"
+msgstr "profiler"
+
+#: core/profiles/templates/core/profiles/edit.html:5
+msgid "Edit user settings"
+msgstr "Rediger brukerinnstillinger"
+
+#: core/templatetags/nav.py:10
+#: help_admin/templates/help_admin/topics/base.html:4
+#: templates/base_inside.html:32
+msgid "Topics"
+msgstr "Emner"
+
+#: core/templatetags/nav.py:11
+#: templates/base_inside.html:33
+#: users/templates/users/base.html:4
+msgid "Users"
+msgstr "Brukere"
+
+#: help_admin/templates/help_admin/topics/base.html:7
+msgid "New topic"
+msgstr "Nytt emne"
+
+#: help_admin/templates/help_admin/topics/base.html:12
+msgid "Topic"
+msgstr "Emne"
+
+#: help_admin/templates/help_admin/topics/base.html:13
+msgid "Code"
+msgstr "Kode"
+
+#: help_admin/templates/help_admin/topics/base.html:14
+msgid "Available languages"
+msgstr "Språk"
+
+#: help_admin/templates/help_admin/topics/base.html:22
+msgid "Add a translation"
+msgstr "Legg inn en oversettelse"
+
+#: help_admin/views/topics.py:35
+#: lfs_help/templates/lfs_help/topic.html:22
+msgid "Edit topic"
+msgstr "Rediger emne"
+
+#: help_admin/views/topics.py:50
+msgid "Add translation"
+msgstr "Legg inn oversettelse"
+
+#: lfs_help/forms.py:31
+msgid "If you cannot find your languages the file is already translated."
+msgstr "Hvis du ikke kan finne ditt språk så er emnet allerede oversatt"
+
+#: lfs_help/models.py:12
+#: lfs_help/models.py:24
+msgid "name"
+msgstr "navn"
+
+#: lfs_help/models.py:13
+#: lfs_help/models.py:25
+#: lfs_help/models.py:38
+msgid "code"
+msgstr "kode"
+
+#: lfs_help/models.py:13
+msgid "Two lowercase letters. Ex: no for Norwegian"
+msgstr "To små bokstaver. Eks: no for Norsk"
+
+#: lfs_help/models.py:19
+#: lfs_help/models.py:43
+msgid "languages"
+msgstr "språk"
+
+#: lfs_help/models.py:31
+#: lfs_help/models.py:44
+msgid "user groups"
+msgstr "brukergrupper"
+
+#: lfs_help/models.py:36
+msgid "title"
+msgstr "tittel"
+
+#: lfs_help/models.py:37
+msgid "superior"
+msgstr "overordnet"
+
+#: lfs_help/models.py:38
+msgid "www.filtersystem.no/no/[kode]"
+msgstr "www.filtersystem.no/no/[kode]"
+
+#: lfs_help/models.py:39
+msgid "content"
+msgstr "innhold"
+
+#: lfs_help/models.py:40
+msgid "order"
+msgstr "rekkefølge"
+
+#: lfs_help/models.py:40
+msgid "Sorting according to other documents with same superior"
+msgstr "Sortering i forhold til andre filer med samme overordnet"
+
+#: lfs_help/models.py:41
+msgid "need authorisation"
+msgstr "krever pålogg"
+
+#: lfs_help/models.py:42
+msgid "active"
+msgstr "aktiv"
+
+#: lfs_help/models.py:45
+msgid "Which user groups should have access to this document. If everyone should have access do not select anyone."
+msgstr "Hvilke brukergrupper skal ha tilgang til dette emnet. Hvis alle skal ha tilgang ikke velg noen."
+
+#: lfs_help/models.py:78
+msgid "topic"
+msgstr "emne"
+
+#: lfs_help/models.py:79
+msgid "topics"
+msgstr "emner"
+
+#: lfs_help/templates/lfs_help/topic.html:12
+msgid "We could not find this helpfile in your language."
+msgstr "Vi kunne ikke finne hjelpfilen på ditt språk"
+
+#: lfs_help/templates/lfs_help/topic.html:21
+msgid "Administration"
+msgstr "Administrasjon"
+
+#: lfs_help/templates/lfs_help/templatetags/sidebar_info.html:5
+msgid "Related topics"
+msgstr "Relaterte emner"
+
+#: lfs_help/templates/lfs_help/templatetags/sidebar_info.html:14
+msgid "Other languages"
+msgstr "Andre språk"
+
+#: templates/base.html:5
+#: templates/base_adv_view.html:6
+msgid "Lekang Online Hjelp"
+msgstr "Lekang Online Hjelp"
+
+#: templates/base.html:12
+msgid "Online usermanual"
+msgstr "Online brukermanual"
+
+#: templates/registration/login.html:6
+msgid "Login"
+msgstr "Logg inn"
+
+#: users/views.py:17
+msgid "Create new user"
+msgstr "Opprett en ny bruker"
+
+#: users/views.py:20
+#, python-format
+msgid "Edit %(object)s"
+msgstr "Rediger %(object)s"
+
+#: users/templates/users/base.html:7
+msgid "New user"
+msgstr "Ny bruker"
+
+#: users/templates/users/base.html:12
+msgid "Username"
+msgstr "Brukernavn"
+
+#: users/templates/users/base.html:13
+msgid "Name"
+msgstr "Navn"
+
+#: users/templates/users/base.html:14
+msgid "Grupper"
+msgstr "Grupper"
+
+#: users/templates/users/base.html:15
+msgid "User group"
+msgstr "Brukergruppe"
+
+#~ msgid "Add Topic"
+#~ msgstr "Opprett emne"
+
+#~ msgid "Add translation to a topic"
+#~ msgstr "Legg til en oversettelse til et emne"
+
+#~ msgid "You are logged in as:"
+#~ msgstr "Du er logget in som:"
+
+#~ msgid "Save"
+#~ msgstr "Lagre"
+
+#~ msgid "Add"
+#~ msgstr "Legg til"

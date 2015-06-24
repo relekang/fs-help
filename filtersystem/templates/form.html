@@ -1,0 +1,56 @@
+{% if forms.non_field_errors %}
+<div class="alert alert-error">
+    <button class="close" data-dismiss="alert">×</button>
+    <strong>Error!</strong> {{ form.non_field_errors }}
+</div>
+{% endif %}
+<form class="form form-horizontal" method="post" enctype="multipart/form-data" {% if form_action %} action="{{ form_action }}"{% endif %}>
+    {% csrf_token %}
+    <fieldset>
+        {% for field in form %}
+            {% if field.is_hidden %}
+                {{ field }}
+            {% else %}
+            <div class="control-group{% if field.errors %} error{% endif %}">
+                {% if field.type == 'checkbox' %}
+                    <div class="controls">
+                        <label class="checkbox">
+                            {{ field }} <span>{{ field.label }}</span>
+                        </label>
+
+                        {% for error in field.errors %}
+                            <span class="help-inline">{{ error }}</span>
+                        {% endfor %}
+
+                        {% if field.help_text %}
+                            <p class="help-block">
+                                {{ field.help_text }}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <label class="control-label">{{ field.label }}</label>
+
+                    <div class="controls">
+                        {{ field }}
+
+                        {% for error in field.errors %}
+                            <span class="help-inline">{{ error }}</span>
+                        {% endfor %}
+
+                        {% if field.help_text %}
+                            <p class="help-block">
+                                {{ field.help_text }}
+                            </p>
+                        {% endif %}
+
+                    </div>
+                {% endif %}
+            </div>
+                {% endif %}
+        {% endfor %}
+    </fieldset>
+    <div class="controls">
+        <button type="submit" class="btn primary">Submit</button>
+    </div>
+</form>

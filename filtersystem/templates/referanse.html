@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Referanser</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <link href="http://filtersystem.no/static/bootstrap.min.css" rel="stylesheet">
+    <link href="http://filtersystem.no/static/bootstrap.responsive.min.css" rel="stylesheet">
+    <link href="http://filtersystem.no/static/chosen.css" rel="stylesheet">
+    <script src="http://filtersystem.no/static/js/bootstrap.min.js"></script>
+    <script src="http://filtersystem.no/static/js/chosen.jquery.min.js"></script>
+    <script src="http://filtersystem.no/static/js/admin.js"></script>
+    <script src="http://intranet.mocco.no/static/js/mocco.messages.min.js" ></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".btn-primary").click(function(){
+                if($("#category").attr("value") == ".") addError("Du må velge et marked");
+                else if($("#c").attr("value") == ".") addError("Du må velge en applikasjon");
+                if($("#category").attr("value") != "." && $("#c").attr("value") != "."){
+                    $(".thumbnails").fadeIn();
+                    $("#alert").html("");
+                }
+            });
+        });
+    </script>
+    <style>
+        label{
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <article>
+                <h1>Referanser</h1>
+                <div id="alert"></div>
+
+                <form action="#" class="form form-inline">
+                    <label for="category">
+                        Marked:
+                        <select id="category" class="chosen input-medium">
+                            <option value=".">---</option>
+                            <option>Anlegg</option>
+                            <option>Shipping</option>
+                            <option>Offshore</option>
+                        </select>
+                    </label>
+                    <label for="c">
+                        Applikasjon:
+                        <select id="c" class="chosen input-medium">
+                            <option value=".">---</option>
+                            <option>Dieselmotor</option>
+                            <option>Process</option>
+                            <option>Støv</option>
+                        </select>
+                    </label>
+                    <label for="f">
+                        Filterløsning:
+                        <select id="f" class="chosen input-medium">
+                            <option value=".">---</option>
+                            <option>Systemfilter</option>
+                            <option>Åndingsfilter</option>
+                        </select>
+                    </label>
+                    <!--<input type="checkbox" name="no" id="filter_no" checked/> <img src="http://filtersystem.no/static/img/flags/no.png">
+                     <input type="checkbox" name="dk" id="filter_dk" checked/> <img src="http://filtersystem.no/static/img/flags/dk.png">
+                     <input type="checkbox" name="se" id="filter_se" checked/> <img src="http://filtersystem.no/static/img/flags/se.png">
+                     <input type="text" class="medium-input" name="q" />
+                     -->
+                    <a href="#" class="btn btn-primary">Søk</a>
+                </form>
+                <ul class="thumbnails" style="display:none;">
+                    <li class="span3">
+                        <div class="thumbnail">
+                            <img src="http://www.lekang.com/referanser/kj%C3%B8lev%C3%A6ske%20reservekraft_id824.jpg" alt="">
+                            <h5>Kjølevæske med lang levetid til alle typer motorer</h5>
+                            <p><strong>Maskin:</strong> 4 stk Perkins reservekraftaggregater</p>
+                        </div>
+                    </li>
+
+                    <li class="span3">
+                        <div class="thumbnail">
+                            <img src="http://www.lekang.com/referanser/rmf_purifier_id862.jpg" alt="">
+                            <a href="javascript:$('#myModal').modal();">
+                                <h5>RMF vakuum aggregat for vedlikehold av olje på ROV</h5>
+                                <p><strong>Hovedmotor:</strong>  4 x Cummins QSK 60 DMI</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+
+    <footer></footer>
+</section>
+
+<div id="myModal" class="modal hide fade" style="width: 800px;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3>RMF vakuum aggregat for vedlikehold av olje på ROV</h3>
+    </div>
+    <div class="modal-body" style="max-height: 600px;">
+        <div style="float: none; clear:both; width: 760px; margin: 0 auto 20px auto; overflow:auto;">
+            <img src="http://placehold.it/450x250" class="pull-left">
+            <img src="http://placehold.it/300x120" class="pull-right">
+            <img src="http://placehold.it/300x120" style="margin-top: 10px" class="pull-right">
+        </div>
+
+        <hr style=" background: none; border:none; clear:both;"/>
+
+        <ul class="unstyled well span3" style="margin: 0 10px 10px 10px;">
+            <li><strong>Kunde:</strong> Bergen Hydraulic AS</li>
+            <li><strong>Skip:</strong> M/V Seabed Worker</li>
+            <li><strong>Hovedmotorer:</strong> 4 x Cummins QSK 60 DMI</li>
+            <li><strong>Hovedkran:</strong> AHC National Oilwell Offshore kran 50 t @ 20 m radius</li>
+            <li><strong>ROV:</strong> Triton XLX 35 Heavy Duty Work</li>
+            <li><strong>ROV utstyr:</strong> ODIM A-ramme i ROV hangaren og ODIM LARS system for sjøsetting og innhenting</li>
+        </ul>
+
+
+
+
+
+
+
+
+        <h4>Problemstilling:</h4> <p>Når ROV undervannsroboten er i drift under vann blir hydraulikk systemet forurenset av vann.</p>
+
+        <h4>Filterløsning:</h4>
+        <p>RMF vakuum aggregat MWV (Mini Water VAC) i ROV hangaren og RMF filteraggregat OLU1A Off-line dypfilter montert på lagringstanken.
+
+            Når ROV undervannsroboten har avsluttet en jobb pumpes hydraulikkoljen gjennom RMF vakuum aggregatet og et dypfilter og deretter inn på lagringstanken.</p>
+
+        <p>Den rene hydraulikkoljen kan nå brukes igjen i ROV systemet.
+
+            RMF vakum aggregat referanse detaljer. </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://filtersystem.no/static/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

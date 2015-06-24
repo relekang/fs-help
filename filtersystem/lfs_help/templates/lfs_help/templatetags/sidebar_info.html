@@ -1,0 +1,25 @@
+{% load i18n %}
+
+<ul class="unstyled nav nav-list">
+    <li class="nav-header">{% trans "Online usermanual" %}</li>
+    <li><a href="{% url topics %}">{% trans "Topics" %}</a></li>
+    <li><a href="{% url search %}">{% trans "Search" %}</a></li>
+</ul>
+
+{% if related_topics %}
+    <ul class="unstyled nav nav-list">
+    <li class="nav-header">{% trans "Related topics" %}</li>
+        {% for topic in related_topics %}
+            <li><a href="{% url view_topic topic.language.code, topic.slug %}">{{ topic }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if other_languages %}
+    <ul class="unstyled nav nav-list">
+        <li class="nav-header">{% trans "Other languages" %}</li>
+        {% for lang in other_languages %}
+            <li><a href="{% url view_topic lang.language.code, lang.slug %}"><img src="/static/img/flags/{{ lang.language.code }}.png" class="icon"> {{ lang.language }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}

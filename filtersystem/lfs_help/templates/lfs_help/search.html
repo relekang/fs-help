@@ -1,0 +1,22 @@
+{% extends "lfs_help/base.html" %}
+{% load i18n topics filters %}
+
+{% block title %}{% trans "Search" %}{% endblock %}
+{% block header %}{% trans "Search" %}{% endblock %}
+
+{% block article_class %}span12{% endblock %}
+{% block sidebar_class %}{% endblock %}
+
+{% block content %}
+
+        {% search query %}
+        {% for topic in topics %}
+        <ul class="unstyled">
+            <li>
+                <a href="{% url view_topic topic.language.code, topic.slug %}"><h3>{{ topic }}</h3></a>
+                <p>{{ topic.content|excerpt|safe }}</p>
+            </li>
+        </ul>
+        {% endfor %}
+
+{% endblock %}

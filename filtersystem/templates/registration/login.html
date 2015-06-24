@@ -1,0 +1,51 @@
+{% extends "base_inside.html" %}
+{% load i18n %}
+{% block navbar %}{% endblock %}
+{% block content %}
+
+    <h1 style="text-align: center;">{% trans "Login" %}</h1>
+{#    <div class="alert alert-info span3" style="margin: 40px auto; float: none;">#}
+{#        <i class="icon icon-info-sign"></i> Bruk brukeren din fra filtersystemet.#}
+{#    </div>#}
+
+    <form method="post" class="form-horizontal span4" name="login" style="margin: 40px auto; float: none;">
+        {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+        {% endif %}
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="id_username">Brukernavn:</label>
+
+                <div class="controls">
+                    <input type="text" id="id_username" name="username" value="{{ username}}"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="id_password">Passord:</label>
+
+                <div class="controls">
+                    <input type="password" name="password" id="id_password" value=""/>
+                </div>
+            </div>
+            <div class="control-group" style="text-align: center;">
+                <input type="submit" style="margin: 4px auto;" class="btn" value="Logg inn"/>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
+
+<form>
+    <fieldset>
+        <legend>Legend text</legend>
+        <div class="control-group">
+            <label class="control-label" for="input01">Text input</label>
+
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="input01">
+
+                <p class="help-block">Supporting help text</p>
+            </div>
+        </div>
+    </fieldset>
+</form>
