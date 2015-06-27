@@ -2,7 +2,7 @@ from django import forms
 from django.forms.models import ModelForm
 from django.utils.translation import ugettext_lazy as _
 
-from fs_help.lfs_help.models import Language, Topic, UserGroup
+from fs_help.lfs_help.models import Language, Topic
 
 
 class TopicForm(ModelForm):

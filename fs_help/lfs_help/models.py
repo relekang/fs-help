@@ -6,7 +6,6 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 
 from fs_help import core
-from fs_help.util import expire_page_cache
 
 
 class Language(models.Model):
@@ -68,7 +67,6 @@ class Topic(models.Model):
     def save(self, *args, **kwargs):
         self.saved_by = core.get_current_user()
         super(Topic, self).save(*args, **kwargs)
-        #expire_page_cache('view_topic', args=[self.language.code, self.slug])
 
     def available_languages(self):
         lang = ""

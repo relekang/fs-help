@@ -24,7 +24,8 @@ Compiler library and Java version 6 or later."""
     compiler = os.path.expanduser(options.compiler)
     if not os.path.exists(compiler):
         sys.exit(
-            "Google Closure compiler jar file %s not found. Please use the -c option to specify the path." % compiler)
+            "Google Closure compiler jar file %s not found. Please use the -c option "
+            "to specify the path." % compiler)
 
     if not args:
         if options.verbose:
@@ -39,7 +40,7 @@ Compiler library and Java version 6 or later."""
         if os.path.exists(to_compress):
             to_compress_min = "%s.min.js" % "".join(arg.rsplit(".js"))
             cmd = "java -jar %s --js %s --js_output_file %s" % (
-            compiler, to_compress, to_compress_min)
+                compiler, to_compress, to_compress_min)
             if options.verbose:
                 sys.stdout.write("Running: %s\n" % cmd)
             subprocess.call(cmd.split())
