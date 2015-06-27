@@ -1,0 +1,8 @@
+{% load i18n %}
+<form class="form form-search" method="get" action="{% url 'search' %}">
+    {% csrf_token %}
+    <form class="well form-search">
+        {{ form }}
+        <button type="submit" class="btn">{% trans "Search" %}</button>
+    </form>
+</form>

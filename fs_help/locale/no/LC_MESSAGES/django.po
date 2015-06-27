@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-25 08:52+0200\n"
+"PO-Revision-Date: 2012-06-18 11:07+0100\n"
+"Last-Translator: Rolf Erik Lekang <me@rolflekang.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: fs_help/core/profiles/models.py:11
+msgid "user"
+msgstr "bruker"
+
+#: fs_help/core/profiles/models.py:12 fs_help/lfs_help/models.py:38
+msgid "user group"
+msgstr "brukergruppe"
+
+#: fs_help/core/profiles/models.py:14 fs_help/lfs_help/models.py:21
+msgid "language"
+msgstr "språk"
+
+#: fs_help/core/profiles/models.py:43
+msgid "profile"
+msgstr "profil"
+
+#: fs_help/core/profiles/models.py:44
+msgid "profiles"
+msgstr "profiler"
+
+#: fs_help/core/profiles/templates/core/profiles/edit.html:5
+msgid "Edit user settings"
+msgstr "Rediger brukerinnstillinger"
+
+#: fs_help/core/templatetags/nav.py:11
+#: fs_help/help_admin/templates/help_admin/topics/base.html:4
+#: fs_help/lfs_help/templates/lfs_help/list.html:4
+#: fs_help/lfs_help/templates/lfs_help/list.html:5
+#: fs_help/lfs_help/templates/lfs_help/templatetags/sidebar_info.html:5
+#: fs_help/templates/base_inside.html:32
+msgid "Topics"
+msgstr "Emner"
+
+#: fs_help/core/templatetags/nav.py:12 fs_help/templates/base_inside.html:35
+#: fs_help/users/templates/users/base.html:4
+msgid "Users"
+msgstr "Brukere"
+
+#: fs_help/help_admin/templates/help_admin/topics/base.html:7
+msgid "New topic"
+msgstr "Nytt emne"
+
+#: fs_help/help_admin/templates/help_admin/topics/base.html:12
+msgid "Topic"
+msgstr "Emne"
+
+#: fs_help/help_admin/templates/help_admin/topics/base.html:13
+msgid "Code"
+msgstr "Kode"
+
+#: fs_help/help_admin/templates/help_admin/topics/base.html:14
+msgid "Available languages"
+msgstr "Språk"
+
+#: fs_help/help_admin/templates/help_admin/topics/base.html:24
+msgid "Add a translation"
+msgstr "Legg inn en oversettelse"
+
+#: fs_help/help_admin/views/topics.py:36 fs_help/help_admin/views/topics.py:54
+msgid "Topic was saved"
+msgstr ""
+
+#: fs_help/help_admin/views/topics.py:39
+#: fs_help/lfs_help/templates/lfs_help/topic.html:22
+msgid "Edit topic"
+msgstr "Rediger emne"
+
+#: fs_help/help_admin/views/topics.py:57
+msgid "Add translation"
+msgstr "Legg inn oversettelse"
+
+#: fs_help/help_admin/views/user_groups.py:19
+#, fuzzy
+#| msgid "User group"
+msgid "User groups saved"
+msgstr "Brukergruppe"
+
+#: fs_help/lfs_help/forms.py:44
+msgid "If you cannot find your languages the file is already translated."
+msgstr "Hvis du ikke kan finne ditt språk så er emnet allerede oversatt"
+
+#: fs_help/lfs_help/models.py:13 fs_help/lfs_help/models.py:27
+msgid "name"
+msgstr "navn"
+
+#: fs_help/lfs_help/models.py:14 fs_help/lfs_help/models.py:28
+#: fs_help/lfs_help/models.py:47
+msgid "code"
+msgstr "kode"
+
+#: fs_help/lfs_help/models.py:15
+msgid "Two lowercase letters. Ex: no for Norwegian"
+msgstr "To små bokstaver. Eks: no for Norsk"
+
+#: fs_help/lfs_help/models.py:22 fs_help/lfs_help/models.py:54
+msgid "languages"
+msgstr "språk"
+
+#: fs_help/lfs_help/models.py:39 fs_help/lfs_help/models.py:57
+msgid "user groups"
+msgstr "brukergrupper"
+
+#: fs_help/lfs_help/models.py:44
+msgid "title"
+msgstr "tittel"
+
+#: fs_help/lfs_help/models.py:46
+msgid "superior"
+msgstr "overordnet"
+
+#: fs_help/lfs_help/models.py:48
+msgid "www.filtersystem.no/no/[kode]"
+msgstr "www.filtersystem.no/no/[kode]"
+
+#: fs_help/lfs_help/models.py:49
+msgid "content"
+msgstr "innhold"
+
+#: fs_help/lfs_help/models.py:50
+msgid "order"
+msgstr "rekkefølge"
+
+#: fs_help/lfs_help/models.py:51
+msgid "Sorting according to other documents with same superior"
+msgstr "Sortering i forhold til andre filer med samme overordnet"
+
+#: fs_help/lfs_help/models.py:52
+msgid "need authorisation"
+msgstr "krever pålogg"
+
+#: fs_help/lfs_help/models.py:53
+msgid "active"
+msgstr "aktiv"
+
+#: fs_help/lfs_help/models.py:60
+msgid ""
+"Which user groups should have access to this document. If everyone should "
+"have access do not select anyone."
+msgstr ""
+"Hvilke brukergrupper skal ha tilgang til dette emnet. Hvis alle skal ha "
+"tilgang ikke velg noen."
+
+#: fs_help/lfs_help/models.py:95
+msgid "topic"
+msgstr "emne"
+
+#: fs_help/lfs_help/models.py:96
+msgid "topics"
+msgstr "emner"
+
+#: fs_help/lfs_help/templates/lfs_help/search.html:4
+#: fs_help/lfs_help/templates/lfs_help/search.html:5
+#: fs_help/lfs_help/templates/lfs_help/templatetags/search.html:6
+#: fs_help/lfs_help/templates/lfs_help/templatetags/sidebar_info.html:6
+msgid "Search"
+msgstr ""
+
+#: fs_help/lfs_help/templates/lfs_help/templatetags/sidebar_info.html:4
+#: fs_help/templates/base.html:12
+msgid "Online usermanual"
+msgstr "Online brukermanual"
+
+#: fs_help/lfs_help/templates/lfs_help/templatetags/sidebar_info.html:11
+msgid "Related topics"
+msgstr "Relaterte emner"
+
+#: fs_help/lfs_help/templates/lfs_help/templatetags/sidebar_info.html:20
+msgid "Other languages"
+msgstr "Andre språk"
+
+#: fs_help/lfs_help/templates/lfs_help/topic.html:12
+msgid "We could not find this helpfile in your language."
+msgstr "Vi kunne ikke finne hjelpfilen på ditt språk"
+
+#: fs_help/lfs_help/templates/lfs_help/topic.html:21
+msgid "Administration"
+msgstr "Administrasjon"
+
+#: fs_help/templates/base.html:5 fs_help/templates/base_adv_view.html:6
+msgid "Lekang Online Hjelp"
+msgstr "Lekang Online Hjelp"
+
+#: fs_help/templates/base_inside.html:38
+#, fuzzy
+#| msgid "User group"
+msgid "User groups"
+msgstr "Brukergruppe"
+
+#: fs_help/templates/base_inside.html:43
+msgid "Log out"
+msgstr ""
+
+#: fs_help/templates/registration/logged_out.html:6
+#, fuzzy
+#| msgid "You are logged in as:"
+msgid "You logged out"
+msgstr "Du er logget in som:"
+
+#: fs_help/templates/registration/login.html:6
+msgid "Login"
+msgstr "Logg inn"
+
+#: fs_help/users/forms.py:20
+msgid "Chose the what rights this user should have"
+msgstr ""
+
+#: fs_help/users/forms.py:21
+msgid "Permissons"
+msgstr ""
+
+#: fs_help/users/templates/users/base.html:7
+msgid "New user"
+msgstr "Ny bruker"
+
+#: fs_help/users/templates/users/base.html:12
+msgid "Username"
+msgstr "Brukernavn"
+
+#: fs_help/users/templates/users/base.html:13
+msgid "Name"
+msgstr "Navn"
+
+#: fs_help/users/templates/users/base.html:14
+msgid "Grupper"
+msgstr "Grupper"
+
+#: fs_help/users/templates/users/base.html:15
+msgid "User group"
+msgstr "Brukergruppe"
+
+#: fs_help/users/views.py:20
+msgid "Create new user"
+msgstr "Opprett en ny bruker"
+
+#: fs_help/users/views.py:23
+#, python-format
+msgid "Edit %(object)s"
+msgstr "Rediger %(object)s"
+
+#~ msgid "Add Topic"
+#~ msgstr "Opprett emne"
+
+#~ msgid "Add translation to a topic"
+#~ msgstr "Legg til en oversettelse til et emne"
+
+#~ msgid "Save"
+#~ msgstr "Lagre"
+
+#~ msgid "Add"
+#~ msgstr "Legg til"

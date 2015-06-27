@@ -1,0 +1,29 @@
+{% extends "help_admin/base.html" %}
+{% load i18n %}
+{% block content %}
+    <h1>{% trans "Topics" %}</h1>
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            <a href="{% url 'add_topic' %}" class="btn"><i class="icon icon-plus-sign"></i> {% trans "New topic" %}</a>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th>{% trans "Topic" %}</th>
+            <th>{% trans "Code" %}</th>
+            <th colspan="2">{% trans "Available languages" %}</th>
+        </tr>
+        {% for topic in topics %}
+            <tr>
+                <td>
+                    <a href="{% url 'view_topic' user.profile.language topic.slug %}">{{ topic }}</a>
+                </td>
+                <td>{{ topic.slug }}</td>
+                <td>{{ topic.lang_link_list }}</td>
+                <td>
+                    <a href="{% url 'help_admin.views.topics.add_translation' topic.slug %}">{% trans "Add a translation" %}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
