@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.translation import activate
@@ -43,14 +44,20 @@ def list_topics(request):
 
 @login_required
 def search(request):
-    query = request.GET.get('query') or ''
-    q = get_query(query, ['title', 'content'], user=request.user)
+    query = request.GET.get('query')
     language = Language.objects.get(code=request.user.profile.language)
-    topics = list(Topic.objects.filter(language=language,
-                                       user_groups__contains=request.user.profile.user_group,
-                                       active=True).filter(q))
-    topics += list(Topic.objects.filter(language=language, user_groups=None, active=True).filter(q))
-    topics.sort(key=lambda s: s.title)
+    topics = Topic.objects.filter(language=language, active=True).order_by('title')
+    if request.user.profile.user_group:
+        topics.filter(
+            Q(user_groups__contains=request.user.profile.user_group) | Q(user_groups=None)
+        )
+    else:
+        topics.filter(user_groups=None)
+
+    if query:
+        q = get_query(query, ['title', 'content'], user=request.user)
+        topics.filter(q)
+
     return render(request, 'lfs_help/search.html', {'topics': topics, 'query': query})
 
 

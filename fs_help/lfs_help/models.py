@@ -82,7 +82,7 @@ class Topic(models.Model):
         links = [
             base_str % (reverse('edit_topic', args=[translation.pk]), translation.language)
             for translation in self.translations()
-            ]
+        ]
 
         return mark_safe(', '.join(links))
 
