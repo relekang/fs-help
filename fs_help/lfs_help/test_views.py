@@ -10,6 +10,12 @@ def english():
 
 
 @pytest.mark.django_db
+def test_topics_with_no_query(admin_client, english):
+    response = admin_client.get(reverse('topics'))
+    assert response.status_code == 200
+
+
+@pytest.mark.django_db
 def test_search_with_no_query(admin_client, english):
     response = admin_client.get(reverse('search'))
     assert response.status_code == 200

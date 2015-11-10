@@ -33,12 +33,13 @@ def topic(request, slug, lang):
 @login_required
 def list_topics(request):
     language = Language.objects.get(code=request.user.profile.language)
-    topics = list(
-        Topic.objects.filter(language=language, user_groups=request.user.profile.user_group,
-                             active=True, parent=None).order_by('title'))
-    topics += list(Topic.objects.filter(language=language, user_groups=None, active=True,
-                                        parent=None).order_by('title'))
-    topics.sort(key=lambda s: s.title)
+    topics = Topic.objects.filter(language=language, active=True, parent=None).order_by('title')
+    if request.user.profile.user_group:
+        topics.filter(
+            Q(user_groups__contains=request.user.profile.user_group) | Q(user_groups=None)
+        )
+    else:
+        topics.filter(user_groups=None)
     return render(request, 'lfs_help/list.html', {'topics': topics})
 
 
