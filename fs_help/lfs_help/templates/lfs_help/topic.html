@@ -6,8 +6,6 @@
 {% block header %}{{ topic.title }}{% endblock %}
 {% block article_class %}span9 topic{% endblock %}
 {% block content %}
-
-
     {% if wrong_language %}
         <div class="alert">{% trans "We could not find this helpfile in your language." %}</div>
     {% endif %}

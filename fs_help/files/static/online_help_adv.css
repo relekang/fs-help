@@ -28,7 +28,7 @@ hr {
 .row-fluid header {
   font-family: Georgia, serif;
   margin: 0 auto !important;
-  text-align: center;
+  text-align: left;
   float: right !important;
 }
 .row-fluid header img {

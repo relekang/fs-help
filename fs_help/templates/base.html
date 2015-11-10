@@ -2,16 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %} - {% trans "Lekang Online Hjelp" %}</title>
-    <link href="/static/online_help.css" rel="stylesheet" />
-    {% block include %}{% endblock %}
+  <title>{% block title %}{% endblock %} - {% trans "Lekang Online Hjelp" %}</title>
+  <link href="/static/online_help.css" rel="stylesheet"/>
+  {% block include %}{% endblock %}
 </head>
 <body>
 <section>
-    <article>
-        <header>{% block header %}{% endblock %}<img src="http://www.lekang.com/image/loginlogo.jpg" /><span>{% trans "Online usermanual" %}</span></header>
-        {% block content %} {% endblock %}
-    </article>
+  <article>
+    <header>
+      {% block header %}{% endblock %}
+      <img src="http://www.lekang.com/image/loginlogo.jpg"/>
+      <span>{% trans "Online usermanual" %}</span>
+    </header>
+    {% block content %} {% endblock %}
+  </article>
 </section>
 </body>
 </html>
