@@ -33,31 +33,26 @@ def topic(request, slug, lang):
 @login_required
 def list_topics(request):
     language = Language.objects.get(code=request.user.profile.language)
-    topics = Topic.objects.filter(language=language, active=True, parent=None).order_by('title')
+    permission_query = Q(user_groups=None)
     if request.user.profile.user_group:
-        topics.filter(
-            Q(user_groups__contains=request.user.profile.user_group) | Q(user_groups=None)
-        )
-    else:
-        topics.filter(user_groups=None)
+        permission_query |= Q(user_groups__contains=request.user.profile.user_group)
+    topics = Topic.objects.filter(permission_query, language=language, active=True, parent=None)\
+                          .order_by('title')
     return render(request, 'lfs_help/list.html', {'topics': topics})
 
 
 @login_required
 def search(request):
-    query = request.GET.get('query')
+    query = request.GET.get('query') or ''
     language = Language.objects.get(code=request.user.profile.language)
-    topics = Topic.objects.filter(language=language, active=True).order_by('title')
+    permission_query = Q(user_groups=None)
     if request.user.profile.user_group:
-        topics.filter(
-            Q(user_groups__contains=request.user.profile.user_group) | Q(user_groups=None)
-        )
-    else:
-        topics.filter(user_groups=None)
+        permission_query |= Q(user_groups__contains=request.user.profile.user_group)
 
-    if query:
-        q = get_query(query, ['title', 'content'], user=request.user)
-        topics.filter(q)
+    q = get_query(query, ['title', 'content'], user=request.user) or Q()
+
+    topics = Topic.objects.filter(permission_query, q, language=language, active=True)\
+                          .order_by('title')
 
     return render(request, 'lfs_help/search.html', {'topics': topics, 'query': query})
 
