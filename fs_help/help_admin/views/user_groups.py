@@ -10,7 +10,7 @@ from fs_help.lfs_help.models import UserGroup
 @permission_required('lfs_help.can_change_usergroup')
 def edit_user_groups(request):
     groups = UserGroup.objects.all()
-    UserGroupFormSet = modelformset_factory(UserGroup, extra=0)
+    UserGroupFormSet = modelformset_factory(UserGroup, fields=['name', 'code'], extra=0)
     formset = UserGroupFormSet(queryset=groups)
     if request.method == 'POST':
         if formset.is_valid():
