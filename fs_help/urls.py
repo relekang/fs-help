@@ -9,7 +9,7 @@ admin.autodiscover()
 urlpatterns = [
     url(
         r'^robots\.txt$',
-        lambda r: HttpResponse("User-agent: *\nDisallow: /", mimetype="text/plain")
+        lambda r: HttpResponse("User-agent: *\nDisallow: /", content_type="text/plain")
     ),
     url(r'^admin/users/', include('fs_help.users.urls')),
     url(r'^admin/', include('fs_help.help_admin.urls')),
