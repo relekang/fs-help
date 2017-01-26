@@ -24,7 +24,7 @@ def generate_password(length=8, chars=string.letters + string.digits):
 def login_with_lfs(username, password):
     print "Login with lfs"
     url = settings.LFS_URL
-    path = '/wsScripts/cgiip.exe/WService=wslfshtml/remote-auth.r'
+    path = '/lfsstatic/lfsframeset.htm?page=remote-auth'
     params = urllib.urlencode(
         {'username': username, 'password': password, 'token': settings.LFS_TOKEN})
     headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
