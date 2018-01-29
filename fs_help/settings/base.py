@@ -6,6 +6,8 @@ SECRET_KEY = 'eg&k$aj-m-!_ex*mya%%gn(*i)+z!n-d^(1wuc=1#yx#j35j8#'
 DEBUG = True
 ALLOWED_HOSTS = []
 
+LFS_URL = None
+LFS_TOKEN = None
 
 INSTALLED_APPS = (
     'fs_help.core',
