@@ -45,7 +45,7 @@ def edit_topic(request, id=None):
 def add_translation(request, slug):
     base = Topic.objects.get(language__code='no', slug=slug)
     instance = Topic(title=base.title, slug=base.slug, order=base.order, need_auth=base.need_auth,
-                     parent=base.parent)
+                     parent=base.parent, active=True)
     form = TopicTranslationForm(instance=instance)
     if request.method == 'POST':
         form = TopicTranslationForm(request.POST, instance=instance)
